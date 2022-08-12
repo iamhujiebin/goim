@@ -30,6 +30,9 @@ stop:
 	pkill -f target/job
 	pkill -f target/comet
 
+windows:
+    kafka in wsl;other exec bin by below your self
+
 dis:
 	target/discovery -conf=target/discovery.toml
 
