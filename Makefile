@@ -30,11 +30,8 @@ stop:
 	pkill -f target/job
 	pkill -f target/comet
 
-#windows:
-#    kafka in wsl;other exec bin by below your self
-
 dis:
-	target/discovery -conf=target/discovery.toml
+	cd target && ./discovery -conf=discovery.toml
 
 logic:
 	target/logic -conf=target/logic.toml -region=sh -zone=sh001 -deploy.env=dev -weight=10
