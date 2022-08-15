@@ -46,9 +46,11 @@ demo:
 	echo "127.0.0.1:1999" && cd examples/javascript && go run main.go
 
 zoo:
+	# wsl: /root/download/kafka_2.12-2.6.0/bin/zookeeper-server-start.sh /root/download/kafka_2.12-2.6.0/config/zookeeper.properties
 	target/kafka_2.13-3.2.1/bin/zookeeper-server-start.sh target/kafka_2.13-3.2.1/config/zookeeper.properties
 
 kafka:
+	# wsl: /root/download/kafka_2.12-2.6.0/bin/kafka-server-start.sh /root/download/kafka_2.12-2.6.0/config/server.properties
 	rm -rf target/kafka_2.13-3.2.1/logs && \
 	target/kafka_2.13-3.2.1/bin/kafka-server-start.sh target/kafka_2.13-3.2.1/config/server.properties
 
