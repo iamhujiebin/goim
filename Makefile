@@ -57,7 +57,12 @@ kafka:
 curl:
 	curl -d 'mid message' 'http://127.0.0.1:3111/goim/push/mids?operation=1000&mids=123' \
 	&& curl -d 'room message' 'http://127.0.0.1:3111/goim/push/room?operation=1000&type=live&room=1000'\
-	&& curl -d 'broadcast message' 'http://127.0.0.1:3111/goim/push/all?operation=1000'
+	&& curl -d 'broadcast message' 'http://127.0.0.1:3111/goim/push/all?operation=1000' \
+	&& curl 'http://127.0.0.1:3111/goim/online/room?type=live&rooms=1000&rooms=1001' \
+	&& curl 'http://127.0.0.1:3111/goim/online/top?type=live&limit=10' \
+	&& curl 'http://127.0.0.1:3111/goim/online/total'\
+	&& curl 'http://127.0.0.1:3111/goim/nodes/weighted' \
+	&& curl 'http://127.0.0.1:3111/goim/nodes/instances'
 
 
 
